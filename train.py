@@ -8,7 +8,7 @@ import datetime
 import data_helper
 from TextCNN import TextCNN
 
-from tensorflow.contrib import learn
+from tensorflow_core .contrib import learn
 
 
 # Parameters参数设置
@@ -42,8 +42,8 @@ tf.flags.DEFINE_boolean("allow_soft_placement", True, "Allow device soft device 
 tf.flags.DEFINE_boolean("log_device_placement", False, "Log placement of ops on devices")
 
 FLAGS = tf.flags.FLAGS
-FLAGS._parse_flags()
-
+#FLAGS._parse_flags()
+FLAGS.flag_values_dict()
 print("\nParameters:")
 for attr, value in sorted(FLAGS.__flags.items()):
     print("{}={}".format(attr.upper(), value))
